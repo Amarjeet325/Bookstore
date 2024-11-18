@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import list from "../../public/list.json";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,7 +13,7 @@ function Freebook() {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("http://localhost:4001/book");
+        const res = await axios.get("http://localhost:3002/book");
 
         const data = res.data.filter((data) => data.category === "Free");
         console.log(data);
