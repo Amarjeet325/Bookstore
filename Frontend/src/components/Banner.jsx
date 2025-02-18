@@ -31,11 +31,13 @@ function Banner() {
           <button className="btn mt-6 btn-secondary">Get Started</button>
         </div>
         <div className=" order-1 w-full mt-20 md:w-1/2">
-          <img
+          {/* <img
             src={banner}
             className="md:w-[550px] md:h-[460px] md:ml-12"
             alt=""
-          />
+          /> */}
+          <img src="/Banner.png" alt="Banner" />
+
         </div>
       </div>
     </>
