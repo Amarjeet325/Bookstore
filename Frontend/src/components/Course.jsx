@@ -128,16 +128,18 @@ function Course() {
             <Cards key={item.id} item={item} />
           ))}
           {googleBooks.map((item) => (
-            <Cards
-              key={item.id}
-              item={{
-                id: item.id,
-                title: item.volumeInfo.title,
-                authors: item.volumeInfo.authors?.join(", ") || "Unknown Author",
-                image: item.volumeInfo.imageLinks?.thumbnail || "https://via.placeholder.com/150",
-              }}
-            />
-          ))}
+  <Cards
+    key={item.id}
+    item={{
+      id: item.id,
+      title: item.volumeInfo.title,
+      authors: item.volumeInfo.authors?.join(", ") || "Unknown Author",
+      image: item.volumeInfo.imageLinks?.thumbnail || "https://via.placeholder.com/150",
+      buyLink: item.saleInfo?.buyLink || item.volumeInfo?.previewLink || null,
+    }}
+  />
+))}
+
         </div>
       </div>
     </>
